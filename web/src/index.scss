@@ -1,5 +1,5 @@
 $mainColor: #22232c;
-$textColor: #c1c2c5;
+$textColor: #14ffa5;
 $mainFont: Roboto;
 
 $secondaryColor: rgba(12, 12, 12, 0.4);
@@ -121,13 +121,14 @@ button:active {
   justify-content: center;
   align-items: center;
   height: 100%;
-
   gap: 20px;
 }
 
 .inventory-control {
   display: flex;
-
+  padding:  15px;
+  background-color: $mainColor;
+  border-radius: 6px;
   .inventory-control-wrapper {
     display: flex;
     flex-direction: column;
@@ -135,17 +136,17 @@ button:active {
     justify-content: center;
     align-items: center;
   }
-
+  
   .inventory-control-input {
     transition: 200ms;
-    padding: 16px 8px;
+    padding: 12px 8px;
     border-radius: 2.5%;
     font-family: $mainFont;
     font-size: 16px;
     text-align: center;
     outline: none;
     border: none;
-    color: #fff;
+    color: $textColor;
     background-color: $secondaryColor;
     &:focus-within {
       background-color: $secondaryColorDark;
@@ -154,7 +155,7 @@ button:active {
 
   .inventory-control-button {
     font-size: 14px;
-    color: #fff;
+    color: $textColor;
     background-color: $secondaryColor;
     transition: 200ms;
     padding: 12px 8px;
@@ -261,6 +262,9 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: calc($gridGap * 2);
+  background-color: $mainColor;
+  padding:15px;
+  border-radius:8px;
 }
 .inventory-grid-header-wrapper {
   display: flex;
@@ -278,6 +282,7 @@ button:active {
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
   overflow-y: scroll;
+  margin: 10px
 }
 
 // inventory slots
@@ -296,7 +301,7 @@ button:active {
 }
 
 .inventory-slot-label-box {
-  background-color: $mainColor;
+  background-color: $secondaryColor;
   color: $textColor;
   text-align: center;
   border-bottom-left-radius: 0.25vh;
@@ -318,13 +323,14 @@ button:active {
 }
 
 .inventory-slot-number {
-  background-color: white;
+  background-color: $textColor;
   color: black;
-  height: 12px;
+  height: 16px;
   border-top-left-radius: 0.25vh;
   border-bottom-right-radius: 0.25vh;
   padding: 3px;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight:500;
   font-family: $mainFont;
 }
 
